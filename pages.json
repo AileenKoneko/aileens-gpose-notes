@@ -1,0 +1,59 @@
+{
+  "site": {
+    "title": "Aileen's Gpose Notes",
+    "tagline": "Notes from experimenting with ReShade and gpose in Final Fantasy XIV.",
+    "footer": "© 2026 — Aileen Koneko"
+  },
+  "effects": [
+    {
+      "slug": "launchpad",
+      "title": "Launchpad",
+      "summary": "Upstream utility shader: smoothed normals and motion vectors that feed every other physically-based effect."
+    },
+    {
+      "slug": "ambient-occlusion",
+      "title": "Ambient Occlusion",
+      "summary": "Soft contact shadows in crevices and where surfaces meet — the cheapest way to kill a flat-looking gpose."
+    },
+    {
+      "slug": "sharpen",
+      "title": "Sharpen",
+      "summary": "Local edge contrast boost that recovers detail lost to anti-aliasing, upscaling, or low resolution."
+    },
+    {
+      "slug": "smaa",
+      "title": "SMAA",
+      "summary": "Post-process anti-aliasing that cleans up jagged edges the game's built-in AA misses."
+    },
+    {
+      "slug": "clarity",
+      "title": "Clarity",
+      "summary": "Midtone local-contrast lift — makes flat-lit scenes pop without the halos of heavy sharpening."
+    },
+    {
+      "slug": "depth-of-field",
+      "title": "Depth of Field",
+      "summary": "Photographic background blur that separates your subject from the scene and produces real bokeh."
+    },
+    {
+      "slug": "color-grading",
+      "title": "Color Grading",
+      "summary": "Exposure, contrast, white balance, hue and tone shaping — where a screenshot becomes a look."
+    },
+    {
+      "slug": "rtgi-diffuse",
+      "title": "RTGI — Diffuse Illumination",
+      "summary": "Screen-space ray-traced global illumination — the soft bounced fill light the game engine never computes."
+    },
+    {
+      "slug": "rtgi-specular",
+      "title": "RTGI — Specular Reflection",
+      "summary": "Ray-traced glossy reflections graded by surface roughness — puts real shine on metal, stone, and water."
+    },
+    {
+      "slug": "bloom",
+      "title": "Bloom",
+      "summary": "Soft glow around bright areas, simulating light scattering in the eye and camera optics."
+    }
+  ]
+}

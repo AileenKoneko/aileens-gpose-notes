@@ -1,0 +1,41 @@
+{
+  "disclaimer": "Shots by me and other contributors, using a mix of shaders — not just the iMMERSE stack I run myself. These pages are about what each effect can do, not about which shader you should pick. Use whatever fits your vision.",
+  "gallery": [
+    {
+      "file": "images/gallery/a1.webp",
+      "title": "Crystarium inn",
+      "author": "Aileen Koneko",
+      "shaders": ["Bloom", "Color Grading", "RTGI"]
+    },
+    {
+      "file": "images/gallery/a2.png",
+      "title": "Crystarium",
+      "author": "Aileen Koneko",
+      "shaders": ["Bloom", "Color Grading", "RTGI"]
+    },
+    {
+      "file": "images/gallery/a3.webp",
+      "title": "Lakeland Sunset",
+      "author": "Aileen Koneko",
+      "shaders": ["Bloom", "Color Grading", "RTGI"]
+    },
+    {
+      "file": "images/gallery/a4.webp",
+      "title": "Limsan Inn",
+      "author": "Aileen Koneko",
+      "shaders": ["Bloom", "Color Grading", "RTGI"]
+    },
+    {
+      "file": "images/gallery/a5.webp",
+      "title": "Limsan fog at night",
+      "author": "Aileen Koneko",
+      "shaders": ["Bloom", "Color Grading", "RTGI"]
+    },
+    {
+      "file": "images/gallery/a6.webp",
+      "title": "Shadowbringers",
+      "author": "Aileen Koneko",
+      "shaders": ["Bloom", "Color Grading", "RTGI"]
+    }
+  ]
+}

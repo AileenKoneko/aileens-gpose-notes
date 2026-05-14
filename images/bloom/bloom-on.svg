@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241a3a"/>
+      <stop offset="0.6" stop-color="#3a2f5a"/>
+      <stop offset="1" stop-color="#241830"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="0.3" stop-color="#fff5d6" stop-opacity="0.7"/>
+      <stop offset="0.7" stop-color="#a78bfa" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#sky2)"/>
+
+  <g>
+    <circle cx="320" cy="220"  r="120" fill="url(#glow)"/>
+    <circle cx="640" cy="180"  r="190" fill="url(#glow)"/>
+    <circle cx="960" cy="240"  r="110" fill="url(#glow)"/>
+    <circle cx="200" cy="380"  r="90"  fill="url(#glow)"/>
+    <circle cx="1080" cy="400" r="140" fill="url(#glow)"/>
+    <circle cx="460" cy="460"  r="70"  fill="url(#glow)"/>
+    <circle cx="800" cy="520"  r="100" fill="url(#glow)"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="320" cy="220" r="14"/>
+    <circle cx="640" cy="180" r="22"/>
+    <circle cx="960" cy="240" r="12"/>
+    <circle cx="200" cy="380" r="10"/>
+    <circle cx="1080" cy="400" r="16"/>
+    <circle cx="460" cy="460" r="8"/>
+    <circle cx="800" cy="520" r="11"/>
+  </g>
+  <g fill="#3a2a5a" opacity="0.7">
+    <polygon points="0,720 200,520 380,600 540,500 700,580 900,480 1100,560 1280,500 1280,720"/>
+  </g>
+  <text x="50%" y="92%" text-anchor="middle" fill="#c4b5fd" font-family="sans-serif" font-size="22" letter-spacing="2">PLACEHOLDER — BLOOM ON</text>
+</svg>

@@ -1,0 +1,61 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+Icon?
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.Trash-*
+.nfs*
+
+# Editor / IDE
+.claude/
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+.history/
+
+# Vim / Emacs
+*.swp
+*.swo
+*.swn
+.*.swp
+.*.swo
+Session.vim
+.netrwhist
+\#*\#
+.\#*
+
+# Logs / temp
+*.log
+*.tmp
+*.bak
+*.orig
+
+# Local env
+.env
+.env.local
+*.local

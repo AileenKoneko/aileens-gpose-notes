@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1a2e"/>
+      <stop offset="0.6" stop-color="#2d2640"/>
+      <stop offset="1" stop-color="#1a1425"/>
+    </linearGradient>
+    <radialGradient id="red" cx="0.4" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#ef4a4a"/>
+      <stop offset="0.7" stop-color="#b81d1d"/>
+      <stop offset="1" stop-color="#5a0a0a"/>
+    </radialGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e8a8a0"/>
+      <stop offset="0.35" stop-color="#e6c2b8"/>
+      <stop offset="0.7" stop-color="#e8e0d4"/>
+      <stop offset="1" stop-color="#e8e0d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect x="600" y="180" width="420" height="360" fill="url(#wall)" rx="6"/>
+  <circle cx="380" cy="360" r="140" fill="url(#red)"/>
+  <text x="50%" y="92%" text-anchor="middle" fill="#c4b5fd" font-family="sans-serif" font-size="22" letter-spacing="2">PLACEHOLDER — RTGI DIFFUSE ON</text>
+</svg>
