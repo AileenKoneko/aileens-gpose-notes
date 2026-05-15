@@ -126,7 +126,7 @@
         .map(
           (e) => `<a class="effect-card" href="effect.html?page=${encodeURIComponent(e.slug)}">
             <div class="effect-card-image" data-fallback="${escapeHtml(e.title)}">
-              ${e.thumbnail ? `<img src="${escapeHtml(e.thumbnail)}" alt="" loading="lazy" onerror="this.remove()">` : ""}
+              <img src="images/${e.slug}/thumbnail.png" alt="" loading="lazy" onerror="this.remove()">
             </div>
             <div class="effect-card-body">
               <h3 class="effect-card-title">${escapeHtml(e.title)}</h3>

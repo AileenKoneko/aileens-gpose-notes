@@ -22,14 +22,56 @@ A few things to keep in mind:
 The common pitfall is letting bloom carry the exposure. If a scene looks dull, fix exposure first and let bloom add the finish — otherwise you get a hazy milk-glass image instead of luminous highlights — unless it's your goal.
 
 ## How to use it in gposes
+Subtle bloom is often less about obvious glow and more about softening the transition between bright and dark areas.
 
-> _Use cases coming soon._
+In the example below, bloom softens the crystal highlights, lifts the atmosphere around the light sources, and adds a gentle glow around the edges of the character without overpowering the image.
+
+::: compare
+before: images/bloom/1-before.png
+after: images/bloom/1-after.png
+label-before: Bloom off
+label-after: Bloom on
+:::
+
+Which works well for more realistic or cinematic vibes, but bloom on its own can also push a scene into something dreamlike or romantic. So what happens if we crank it to 11?
+
+::: compare
+before: images/bloom/2-before.png
+after: images/bloom/2-after.png
+label-before: Bloom off
+label-after: Bloom on
+:::
+
+The image gets hazy, the subject gets swallowed by the white haze. That's the hazy milk-glass effect I mentioned earlier.
+
+Someone could say that this is just wrong, overcooked. But if you add some orange/warm light...
+
+::: compare
+before: images/bloom/2-after.png
+after: images/bloom/3-after.png
+label-before: Bloom off
+label-after: Bloom on
+:::
+
+Suddenly it feels very hot in here, doesn’t it? Or are we in a fever-dream? :3 
+
 
 ## What I use
 
 I run **iMMERSE Solaris** for this. It reverse-tonemaps the scene back into HDR before computing bloom, so the bloom term behaves like real light and scales with scene exposure rather than being a fixed post-process haze on top of an already-tonemapped image.
 
-> _Personal notes coming soon._
+::: compare
+before: images/bloom/personal-bloom-before.png
+after: images/bloom/personal-bloom-after.png
+label-before: Bloom off
+label-after: Bloom on
+:::
+
+Personally, I usually aim for very subtle bloom, like the soft glow around the arm or where the hair intersects with the clouds in the image above.
+
+My internal rule is:
+
+**“The best bloom is the one you notice only after it’s gone.”**
 
 ::: details Settings — iMMERSE Solaris
 
