@@ -29,38 +29,42 @@ I run **iMMERSE MXAO** for this. It uses Ground Truth AO and a couple of newer a
 
 ::: details Settings — iMMERSE MXAO
 
-### Sample Quality
-Samples per pixel used to figure out occlusion. More samples = less noise, more cost.
-
-### Shading Rate
-What resolution the AO is calculated at — Full, Half, or Quarter. Drop it to claw back performance at the cost of some detail.
-
 ### Sample Radius
-How far out from each pixel the AO looks. Sets the scale of the shadows — small radius for tight contact shadows, larger for broader cavity darkening.
+Small radius hugs the actual contact points — under a chin, the inside of a sleeve. Large radius spreads occlusion out into broader cavity darkening that can read more like a soft grey wash around the figure than a real shadow.
 
 ### Increase Radius with Distance
-Scales the radius based on how far a surface is from the camera. Helps in scenes with deep view distance; can produce odd haloing on far geometry.
+Keeps far-away geometry from losing all its AO — useful for big outdoor scenes. Push it too hard and distant silhouettes pick up a smoky halo around them.
 
 ### Ambient Occlusion Amount
-Overall intensity of the effect.
+Low values are a gentle weight in the shadows. High values pull midtones down and give the shot a heavy, almost charcoal-shaded feel — figures sit firmly in the world but the overall image gets darker and moodier.
 
 ### Fade-Out Distance
-The depth where AO starts disappearing. Stops AO from showing up on distant backdrops where it would just look like dirt.
+Pulls AO off the back of the scene so distant backdrops don't accumulate a dirty wash. Set it too aggressive and your background looks flat compared to the foreground.
+
+:::
+
+::: details Technical controls — iMMERSE MXAO
+
+### Sample Quality
+Low values leave a grainy, noisy shadow under collars and in corners. Push it and the AO settles into smooth, clean cavity shading.
+
+### Shading Rate
+Drops AO down to half or quarter resolution to save frametime. Lower rates show as slightly softer, less precise shadow edges — usually fine on character shots, more noticeable on hard architectural geometry.
 
 ### Filter Quality
-Strength of the denoise pass on the raw AO. Higher hides banding and sample noise at a performance cost.
+Higher values smooth out the speckly noise in the AO at the cost of frametime — cleaner shadow gradients, less of that grainy "dirt" look.
 
 ### MXAO_AO_TYPE
-Algorithm selector: 0 = GTAO, 1 = Solid Angle, 2 = Visibility Bitmask, 3 = Bitmask with Solid Angle. Each has a slightly different character.
+Algorithm selector. Each option gives a slightly different shadow character — worth flipping through with the rest of your settings fixed.
 
 ### MXAO_USE_LAUNCHPAD_NORMALS
-Pulls smoothed/textured surface data from Launchpad instead of the raw depth-derived stuff. Cleaner result if you have Launchpad in your stack.
+Pulls surface data from Launchpad instead of deriving it from depth. Cleaner result if Launchpad is in your stack.
 
 ### _MARTYSMODS_TAAU_SCALE
-Compensates for the sub-pixel jitter that DLSS / FSR / TAAU introduce. Needs Launchpad running before MXAO.
+Compensation toggle for DLSS / FSR / TAAU jitter. Needs Launchpad running before MXAO.
 
 ### Show Raw AO
-Debug view — shows the AO term on its own, no texture. Handy for tuning.
+Debug view — shows just the AO term with no texture underneath.
 
 :::
 

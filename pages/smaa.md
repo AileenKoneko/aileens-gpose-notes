@@ -30,28 +30,32 @@ I run **iMMERSE SMAA** for this. It's a modern take on the SMAA approach with se
 ::: details Settings — iMMERSE SMAA
 
 ### Edge Detection Type
-Which signal SMAA uses to find edges: Luminance, Color (Max), Color (Weighted), or Depth. Luminance is the standard default; depth-based catches geometry edges that luma can miss.
+Which signal SMAA hunts edges from. Luminance is the standard, balanced default. Colour modes catch edges luminance misses — coloured cloth against same-brightness backgrounds, that sort of thing. Depth catches geometry edges that have no visible contrast at all.
 
 ### Edge Detection Threshold
-How sensitive the edge detector is. Lower catches subtle edges but risks false positives on textures; higher only catches prominent edges.
-
-### Depth Edge Detection Threshold
-Sensitivity for the depth-based edge pass. Only active with predicated thresholding.
+Low values catch every subtle edge — cleaner result, but textures can soften because they're being treated as edges too. High values only smooth the obvious jaggies and leave texture detail untouched, at the cost of letting some shimmer through.
 
 ### Max Search Steps
-How far SMAA scans horizontally/vertically along an edge to figure out the gradient direction. Higher = cleaner long edges, more cost.
+Higher values clean up long, shallow edges — roof lines, sword silhouettes — that would otherwise stay slightly stair-stepped. Low values leave those edges with visible crawl.
 
 ### Max Search Steps Diagonal
-Same as above, but for diagonal edges.
+Same idea but for diagonal edges. Higher = cleaner diagonals at frametime cost.
 
 ### Corner Rounding
-How aggressively SMAA smooths at corners. Too high softens corners that should be sharp; too low leaves visible stair-step there.
+Higher values soften corners — fine on character silhouettes, not so fine on architecture where sharp 90° angles should stay sharp. Low values keep corners crisp at the cost of leaving a tiny stair-step.
+
+:::
+
+::: details Technical controls — iMMERSE SMAA
+
+### Depth Edge Detection Threshold
+Sensitivity for the depth-based edge pass. Only matters when predicated thresholding is active.
 
 ### SMAA_USE_EXTENDED_EDGE_DETECTION
-Switch for enhanced detection on high-magnitude edges.
+Toggle for enhanced detection on high-contrast edges.
 
 ### View Edges
-Debug overlay — shows where SMAA decided edges are. Useful when tuning the threshold.
+Debug overlay — shows where SMAA decided edges are.
 
 ### View Weights
 Debug overlay — shows the internal blend weights.

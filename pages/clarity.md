@@ -28,13 +28,13 @@ I run **iMMERSE Clarity** for this. It's a real-time take on the Lightroom/Photo
 ::: details Settings — iMMERSE Clarity
 
 ### Effect Radius
-The area each pixel "looks around" when calculating its local contrast. Smaller radius behaves closer to sharpening. Larger radius behaves closer to a tone curve — broader lift, but with more risk of subtle haloing.
+Small radius keeps the effect close to edge detail — feels like a softer cousin of sharpening, snapping textures forward. Large radius spreads the contrast lift across bigger regions, more like a tone curve. At the top end you start picking up subtle halos around high-contrast silhouettes.
 
 ### Texture Intensity
-Strength of the fine-detail component. The docs suggest starting low and creeping up until you get "natural, crisp enhancement without over-processing artifacts."
+The fine-detail dial. Low values are a gentle crispness — skin reads more present, fabric weave shows. Push it and the image starts looking over-processed, with fine detail feeling stamped on rather than lit.
 
 ### Local Contrast Intensity
-Strength of the broader midtone-contrast lift. The dial that pushes back hardest against flat lighting. At high values the look shifts toward heavy HDR-style processing — whether that's what you want is up to the shot.
+The broader midtone lift — what actually pushes back against flat in-game lighting. Low values give you a tasteful punch in the mids. High values push into HDR-postcard territory: dramatic, slightly grungy, sometimes muddy on skin and skies.
 
 :::
 

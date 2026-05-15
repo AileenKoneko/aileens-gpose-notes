@@ -30,67 +30,71 @@ I run **iMMERSE DoF** for this. It takes real-camera inputs — focal length, f-
 ::: details Settings — iMMERSE DoF
 
 ### Focusing Mode
-Manual Focus (slider-driven focal plane), Autofocus (closest detected surface), or Point-and-Click (middle-mouse target). Default is Autofocus.
+How the focal plane is chosen: Manual (you drive a slider), Autofocus (closest detected surface), or Point-and-Click (middle-mouse target).
 
 ### Focal Distance
-Distance of the focal plane. Range 0.002–1.0, default 0.1. Non-linear so you have more precision close to the camera.
-
-### Show Focus Distance
-Overlay that visualises the focal plane. Modes: Disabled / While Editing / Toggle With GUI / Enabled.
+Where the in-focus plane sits in the scene. Sweep it close and the camera dwells on something near the lens; push it deep and the background snaps into focus while the foreground softens.
 
 ### Center
-Where on-screen the autofocus sample region sits. Range −1.0 to 1.0 on each axis, default 0.0 (centre).
+Where on screen the autofocus reads from. Move it off-centre to lock focus on a subject that isn't dead centre of the frame.
 
 ### Detection Range
-Radius of the autofocus sample region. Range 0.05–1.0, default 0.35.
+How wide an area autofocus considers. Tight values lock on the exact pixel under the centre point; wider values average over a bigger region, less twitchy but less precise.
 
 ### Adjustment Speed
-How quickly autofocus snaps to a new target. Range 0.0–1.0, default 0.5.
+How quickly autofocus chases a new subject. Low values feel like a smooth rack focus; high values snap.
 
 ### Foreground / Background Blur Scale
-Independent multipliers on the foreground vs background blur. 0–100% each, default 100%.
+Independent dials on near vs far blur. Drop the foreground to keep close objects mostly readable while the background still melts; drop the background for the opposite.
 
 ### Focal Length
-The main blur-strength dial. Range 0–350mm, default 90mm. Longer focal lengths = shallower depth of field, more blur.
+The main feel-of-the-lens dial. Short focal lengths (think 24mm) give you wide, deep, almost everything-in-focus shots. Long focal lengths (135mm and up) compress the scene and shrink the focal plane to a sliver — the classic creamy portrait look.
 
 ### Aperture F-Stops
-The aperture size. Range f/0.95 to f/8.0, default f/2.8. Lower f-number = larger aperture = larger bokeh discs and shallower DoF.
+Lower f-numbers (f/1.4, f/0.95) blow open the aperture: huge bokeh, paper-thin focal slice, dreamy and cinematic. Higher f-numbers (f/5.6, f/8) tighten everything up — small, tidy bokeh and a much deeper in-focus zone.
 
 ### Aperture Shape
-Number of aperture blades, 3–12, default 6. Determines the bokeh polygon shape.
+Number of aperture blades. Few blades give you obvious polygonal bokeh — hexagons, pentagons, the "vintage lens" look. More blades round out the discs toward circular.
 
 ### Aperture Roundness
-0.0–1.0, default 1.0. Blends between a hard polygon (0.0) and a perfect circle (1.0).
+Slides between the hard polygon shape and a perfect circle. Low values keep faceted, geometric bokeh that reads as character-y and lens-specific; high values give you smooth modern circular bokeh.
 
 ### Aperture Rotation
-0.0–1.0, default 0.25. Rotates the aperture polygon.
-
-### Quality
-Number of sample rings used to build each bokeh disc. Range 5–25, default 7. Docs recommend 7–12 for real-time.
+Rotates the bokeh polygon. Only matters when the aperture shape is visibly polygonal — useful for tilting the orientation of the bokeh discs so they don't sit flat.
 
 ### Smoothness
-Extra smoothing pass over out-of-focus regions. Range 0.0–1.0, default 0.5.
+Extra blur pass over the out-of-focus areas. Low values keep bokeh discs crisp and individually visible; high values melt them together into a creamier wash.
 
 ### Highlight Intensity
-How prominent bokeh discs from bright highlights are. Range 0.0–1.0, default 0.9.
+Low values keep bright highlights subdued in the blur — soft, even bokeh. High values let highlights punch through as bright bokeh balls, which is what gives night-time and fairy-light shots their look.
 
 ### Highlight Gamma
-Tone-curve adjustment within the highlight bokeh. Range 0.0–1.0, default 1.0.
+Shapes the falloff inside each bokeh ball. Lower values give bokeh discs harder, more defined edges; higher values soften them toward their middle.
 
 ### Color Intensity
-Saturation of the bokeh discs themselves. Range 0.0–1.0, default 1.0.
+Low values desaturate the bokeh toward white. High values keep the colour of each highlight intact — coloured lanterns stay coloured, magic glow stays tinted.
+
+:::
+
+::: details Technical controls — iMMERSE DoF
+
+### Show Focus Distance
+Debug overlay that visualises where the focal plane is sitting.
+
+### Quality
+More sample rings = rounder, cleaner bokeh discs. Low values can leave bokeh looking polygonal or banded even when you've asked for round.
 
 ### Sprite Density
-Performance optimisation that replaces fully-sampled bokeh with cheaper procedural sprites in places. Range 0.0–1.0, default 0.5.
+Performance toggle that swaps fully-sampled bokeh for cheaper sprites in parts of the frame. Lower values are faster but can look less consistent across the blurred area.
 
 ### VRS Strength
-Variable-rate shading in the blurred regions — shades them at a lower rate to save cost. Range 0.0–1.0, default 0.5.
+Drops shading rate in the blurred areas to save frametime. The blur hides most of the quality loss; push it too far and you may see banding in smooth out-of-focus gradients.
 
 ### VRS Debug
-Colour-codes the shading-rate map for debugging. Range 0.0–1.0, default 0.0.
+Debug overlay colour-coding the shading-rate map.
 
 ### Focus Debug Color Scheme
-Palette for the focus overlay: Default, Accessible, Electric Sunset.
+Palette for the focus-distance debug overlay.
 
 :::
 

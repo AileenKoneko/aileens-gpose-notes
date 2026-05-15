@@ -33,29 +33,33 @@ I run **iMMERSE Launchpad** for this. It gives you smoothed and textured surface
 
 ::: details Settings — iMMERSE Launchpad
 
-### Flow Quality
-Motion tracking precision. Higher settings give cleaner results at a small performance cost.
-
-### Flow Optimizer
-Pick between two motion-tracking algorithms. *Sophia* handles complex or turbulent motion better at higher cost; *Newton* is faster and tends to do better on smooth, predictable camera moves but can struggle on fine detail.
-
 ### Smoothed Normals
-Smooths the surface direction data so curved surfaces stop looking like faceted polygons.
+Rounds out the surface data so curved things actually look curved. With it off, gentle curves shade like flat facets — cheeks, shoulders, columns all get a low-poly hardness to them.
 
 ### Textured Normals
-Adds fine surface detail pulled from the colour texture, so lighting reacts to surface roughness the game didn't include.
+Lets lighting respond to fine surface roughness the game never modelled — fabric weave, pores, stone grain. Off, surfaces shade smooth; on, they shade like they have a real microsurface.
 
 ### Textured Normals Sample Radius
-How far around each pixel the texture detail is sampled. Lower preserves sharp detail; higher reduces noise but softens features.
+Low values keep the synthesised detail tight and crisp — every pore reads. High values smear it into something broader and softer, more cloth-like than skin-like.
 
 ### Textured Normals Intensity
-Strength of the synthesised detail. Subtle at low values, exaggerated at high.
+Barely-there at low values, almost like a faint matte coating. Push it and surfaces start to look gritty, even sandpapered.
 
 ### Textured Normals Quality
-Quality preset from 1 (cheap) to 3 (best). 3 looks best but costs the most.
+Higher settings make the synthesised detail look more coherent and less noisy at the cost of frametime.
+
+:::
+
+::: details Technical controls — iMMERSE Launchpad
+
+### Flow Quality
+Push this up and the shaders downstream get steadier motion data — less ghosting on pans, less crawl in RTGI. Low settings leave a faint smear when the camera moves.
+
+### Flow Optimizer
+Algorithm selector for motion tracking. *Sophia* holds up better on turbulent or complex motion; *Newton* is faster and tidier on smooth camera moves.
 
 ### LAUNCHPAD_DEBUG_OUTPUT
-Lets you visualise what Launchpad is producing. Five modes: All, Optical Flow, Optical Flow Vectors, Normals, Depth — useful for checking the data other shaders are receiving from it.
+Debug overlay for inspecting what Launchpad is feeding downstream — flow, normals, or depth.
 
 :::
 

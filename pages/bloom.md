@@ -19,7 +19,7 @@ A few things to keep in mind:
 - **It always starts at a threshold.** Below some brightness, nothing blooms. Above it, the brighter a pixel is, the more it spills.
 - **It is shaped like the lens.** Long, anamorphic horizontal flares come from cinema lenses. Round, diffuse halos come from eyes and most camera lenses. ReShade bloom usually does the round kind unless you stack anamorphic on top.
 
-The common pitfall is letting bloom carry the exposure. If a scene looks dull, fix exposure first and let bloom add the finish — otherwise you get a hazy milk-glass image instead of luminous highlights.
+The common pitfall is letting bloom carry the exposure. If a scene looks dull, fix exposure first and let bloom add the finish — otherwise you get a hazy milk-glass image instead of luminous highlights — unless it's your goal.
 
 ## How to use it in gposes
 
@@ -34,37 +34,41 @@ I run **iMMERSE Solaris** for this. It reverse-tonemaps the scene back into HDR 
 ::: details Settings — iMMERSE Solaris
 
 ### Log Exposure Bias
-Stops of exposure adjustment applied before the bloom calculation. Range −5.0 to 5.0, default 0.0.
+High values make highlights aggressively spill into the frame, which can feel dreamy or overexposed depending on the scene. Negative values pull bloom back — only the truly bright stuff blooms, and the image keeps its clarity.
 
 ### Log HDR Whitepoint
-Brightness above which the reverse-tonemap treats pixels as HDR highlights. Range 0.0–12.0, default 7.0. The effective bloom threshold.
+The threshold above which something starts to bloom. Low values let middling-bright surfaces (skin in sunlight, pale stone) glow softly — the whole image picks up a hazy luminance. High values reserve bloom for actual highlights — neon signs, sun, candle flames — and leave the rest of the scene crisp.
 
 ### Bloom Intensity
-How much bloom is mixed back into the image. Range 0.0–1.0, default 0.3.
+Low values are a tasteful kiss of light around bright things. High values shroud the whole image in glow,pushing the image toward romantic softness or outright overexposure depending on the shot.
 
 ### Bloom Radius
-Spread of the bloom — how far halos extend from their sources. Range 0.0–1.0, default 1.0.
+Low values keep halos tight around their source — sharp little glints. High values let glow extend far across the frame, softening edges and giving the image that hazy, dreamlike spill.
 
 ### Bloom Haziness
-Blends the bloom toward neutral white at high values, keeps it color-correct at low. Range 0.0–1.0, default 0.9.
-
-### High Resolution Input
-Toggle. Computes bloom from the full-resolution image instead of a reduced one — sharper, more expensive.
+Low values keep the bloom coloured — neon stays neon, candlelight stays warm. High values wash the glow toward neutral white, which can feel more cinematic or just blander, depending on what you wanted.
 
 ### Mask by Depth
-Toggle. Reduces bloom on distant geometry so distant highlights don't dominate.
+Toggle. Holds bloom off distant geometry so far-away highlights don't dominate the frame.
 
 ### Depth Mask Strength
-Strength of the depth-based bloom falloff. Range 0.0–1.0, default 0.5.
+How aggressively distant bloom is suppressed. Low values still let some glow leak into the back of the scene; high values keep bloom firmly on the foreground.
+
+### SOLARIS_ARTISTIC_MODE
+Preprocessor toggle. Swaps the physically-based bloom for a set of art-directed blend modes: Energy Conserving, HDR Drama, Orton, Dreamy, Depth Blend, Screen.
+
+:::
+
+::: details Technical controls — iMMERSE Solaris
+
+### High Resolution Input
+Toggle. Computes bloom from the full-resolution image — sharper result, more expensive.
 
 ### ENABLE_SOLARIS_REGRADE_PARITY
-Preprocessor toggle. Hands HDR-space output to ReGrade so color grading happens before tonemap rather than after — keeps the bloom non-destructive.
+Preprocessor toggle. Hands HDR-space output to ReGrade so grading happens before tonemap rather than after — keeps the bloom non-destructive.
 
 ### SOLARIS_PERF_MODE
 Preprocessor toggle. Cheaper path at the cost of some visual quality.
-
-### SOLARIS_ARTISTIC_MODE
-Preprocessor toggle. Switches from the physically-based bloom to a set of art-directed blend modes: Energy Conserving, HDR Drama, Orton, Dreamy, Depth Blend, Screen.
 
 :::
 

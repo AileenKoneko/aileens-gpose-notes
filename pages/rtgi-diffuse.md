@@ -30,25 +30,29 @@ I run **iMMERSE RTGI (diffuse pass)** for this. It uses screen-space ray tracing
 ::: details Settings — iMMERSE RTGI (diffuse)
 
 ### Object Thickness
-How far behind each surface RTGI assumes the object extends — affects how occluded the area behind it gets. Default 0.250, but heavily scene-dependent. Too high and you get haloing/over-occlusion; too low and objects become too transparent to the ray march.
+Low values let objects feel paper-thin — light bleeds around them in ways that can look ghostly or wrong. High values give everything a solid back, which can read more grounded but at the cost of haloing and over-occlusion around silhouettes. Very scene-dependent.
 
 ### Bounce Lighting Intensity
-Strength of the bounced light contribution. The docs caution this shouldn't exceed the brightness of the original light source — past that, the shader is inventing light.
+Low values are a subtle warmth in the shadow side of things — a red wall tinting the floor by a hint. High values push toward dramatic colour bleed, where the entire shaded side of a character glows in the colour of whatever's next to them. Past a certain point the scene starts looking lit by something that isn't actually there.
 
 ### Ambient Occlusion Intensity
-Strength of the AO term that comes out of the same sampling work. Same caution as above.
-
-### Smoothed Normals
-Uses Launchpad-smoothed surface data to soften the bounce result. Helps with the patchy look on low-poly surfaces.
-
-### Textured Normals
-Uses Launchpad-textured surface data so the bounce reacts to fine surface detail.
+Low values give a gentle weight in cavities and contact points. High values darken midtones hard and push the image toward moody, heavy shadow — sometimes muddy if you push it past what the bounce light can support.
 
 ### Fadeout
-Depth at which the GI and AO start fading out. Useful for keeping the effect out of distance fog, plus a small performance gain.
+Pulls the GI off the back of the scene so distance fog doesn't pick up coloured bounce. Keeps the effect focused on the foreground at a small performance benefit.
+
+:::
+
+::: details Technical controls — iMMERSE RTGI (diffuse)
+
+### Smoothed Normals
+Pulls Launchpad-smoothed surface data into the bounce calculation. Helps the GI look soft and continuous rather than patchy across low-poly surfaces.
+
+### Textured Normals
+Lets the bounce light react to fine surface detail from Launchpad. Bounce highlights gain a bit of texture rather than spreading across surfaces evenly.
 
 ### _MARTYSMODS_TAAU_SCALE
-Compensates for the depth jitter that DLSS / FSR / TAAU introduce. Needed for those upscalers to play nicely with RTGI.
+Compensation toggle for DLSS / FSR / TAAU jitter. Needed for those upscalers to play nicely with RTGI.
 
 :::
 

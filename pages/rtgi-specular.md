@@ -29,23 +29,27 @@ I run **iMMERSE RTGI (specular pass)** for this. It's the companion to the diffu
 
 ::: details Settings — iMMERSE RTGI (specular)
 
-### Quality
-Rays cast per pixel: Low / Medium / High / Ultra. Default Medium. More rays = cleaner reflections, less noise, more cost.
-
 ### Object Thickness
-Same as the diffuse pass — how far behind a surface to assume the object extends, to prevent light leak. Range 0.0–1.0, default 0.25.
+Same dial as on the diffuse pass — how solid the shader assumes objects are behind their front surfaces. Affects how reflections handle things they can't see directly.
 
 ### Surface Roughness
-How mirror-like or matte the reflections appear, applied globally. Range 0.0–0.5, default 0.2. The docs suggest 0.15–0.35 for natural-looking results.
+The most consequential dial. At the low end, every surface picks up a mirror-like reflection — floors look wet, polished stone behaves like glass. Push it higher and reflections smear into a satin shimmer; higher still and they become a soft, broad sheen that you almost don't read as reflection at all.
 
 ### Fresnel F0
-Strength of head-on (perpendicular) reflection. Range 0.04–0.5, default 0.04 (typical for non-metals). Push toward 0.1 for slightly more reflection even on flat surfaces.
+Controls how reflective surfaces are when you're looking straight at them. Low values keep flat surfaces matte until you view them at a grazing angle — the natural look for skin, cloth, painted wood. High values give even head-on surfaces a metallic sheen, useful when you want polished armour or jewellery to read as metal.
 
 ### Fade-Out Range
-How far into the scene the specular effect extends. Range 0.001–1.0, default 0.3.
+How far back into the scene the reflections reach. Pull it in tight and only the foreground gets the glossy treatment; push it out and distant water/floors keep reflecting too.
+
+:::
+
+::: details Technical controls — iMMERSE RTGI (specular)
+
+### Quality
+Higher settings produce cleaner, less grainy reflections at frametime cost. Low settings leave a fizzy, noisy quality on glossy surfaces — especially the slightly-rough ones, which need the most rays to look stable.
 
 ### Debug View
-Toggle: Disabled / Specular RTGI / Validation Layer. Use to isolate the specular contribution when tuning.
+Toggle for isolating the specular contribution on its own — useful when tuning.
 
 :::
 

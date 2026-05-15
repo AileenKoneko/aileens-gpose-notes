@@ -30,10 +30,10 @@ I run **iMMERSE Sharpen** for this. It's a simple contrast-based sharpener with 
 ::: details Settings — iMMERSE Sharpen
 
 ### Sharpen Intensity
-Strength of the sharpening. Start at 0 and creep up — the docs explicitly note there's no guard against over-sharpening or ringing.
+Low values just nudge detail back into focus — hair starts reading as strands again, eyes pick up definition. Push it and edges start picking up bright/dark halos and noise crisps into grain. Easy dial to overshoot.
 
 ### Sharpen Preset
-Sampling pattern. *Simple* uses a plus-shape (centre plus 4 neighbours) and is the lighter option. *Advanced* uses a box including diagonals, more refined on detailed or high-resolution images.
+*Simple* is the lighter, plus-shaped sample pattern. *Advanced* includes diagonals, which holds up better on fine detail at higher resolutions but bites harder into edges.
 
 :::
 
