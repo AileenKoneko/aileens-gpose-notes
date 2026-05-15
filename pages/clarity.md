@@ -17,13 +17,13 @@ Pushed too far it can flatten in a different way — skin takes on a grey cast, 
 
 ## How to use it in gposes
 
-> _TODO: your use cases — what FFXIV gpose scenarios benefit from this effect, what looks it helps you achieve._
+> _Use cases coming soon._
 
 ## What I use
 
 I run **iMMERSE Clarity** for this. It's a real-time take on the Lightroom/Photoshop Clarity idea, with separate dials for the sampling area, the fine-detail boost, and the broader midtone contrast.
 
-> _TODO: your personal notes — typical values you reach for, what you pair it with, any quirks you've noticed._
+> _Personal notes coming soon._
 
 ::: details Settings — iMMERSE Clarity
 
@@ -40,4 +40,4 @@ Strength of the broader midtone-contrast lift. The dial that pushes back hardest
 
 ## Alternatives
 
-> _TODO: alternatives_
+> _Alternatives coming soon._

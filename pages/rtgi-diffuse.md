@@ -19,13 +19,13 @@ The limits: RTGI can only see what's in the frame. Light that should come from b
 
 ## How to use it in gposes
 
-> _TODO: your use cases — what FFXIV gpose scenarios benefit from this effect, what looks it helps you achieve._
+> _Use cases coming soon._
 
 ## What I use
 
 I run **iMMERSE RTGI (diffuse pass)** for this. It uses screen-space ray tracing to produce diffuse global illumination plus AO from a single sampling pass.
 
-> _TODO: your personal notes — typical values you reach for, what you pair it with, any quirks you've noticed._
+> _Personal notes coming soon._
 
 ::: details Settings — iMMERSE RTGI (diffuse)
 
@@ -54,4 +54,4 @@ Compensates for the depth jitter that DLSS / FSR / TAAU introduce. Needed for th
 
 ## Alternatives
 
-> _TODO: alternatives_
+> _Alternatives coming soon._

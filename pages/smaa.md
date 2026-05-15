@@ -19,13 +19,13 @@ You'll mostly notice SMAA when it's *off*: distant roof lines shimmer, sword edg
 
 ## How to use it in gposes
 
-> _TODO: your use cases — what FFXIV gpose scenarios benefit from this effect, what looks it helps you achieve._
+> _Use cases coming soon._
 
 ## What I use
 
 I run **iMMERSE SMAA** for this. It's a modern take on the SMAA approach with selectable edge-detection (luma, colour, depth) and tunable quality vs performance trade-offs.
 
-> _TODO: your personal notes — typical values you reach for, what you pair it with, any quirks you've noticed._
+> _Personal notes coming soon._
 
 ::: details Settings — iMMERSE SMAA
 

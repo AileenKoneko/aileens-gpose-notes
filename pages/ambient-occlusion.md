@@ -19,13 +19,13 @@ Tuning notes: a large radius spreads occlusion into a wider halo around characte
 
 ## How to use it in gposes
 
-> _TODO: your use cases — what FFXIV gpose scenarios benefit from this effect, what looks it helps you achieve._
+> _Use cases coming soon._
 
 ## What I use
 
 I run **iMMERSE MXAO** for this. It uses Ground Truth AO and a couple of newer algorithms, with optional Launchpad integration for cleaner surface data and a setting that compensates for upscaling jitter from DLSS / FSR.
 
-> _TODO: your personal notes — typical values you reach for, what you pair it with, any quirks you've noticed._
+> _Personal notes coming soon._
 
 ::: details Settings — iMMERSE MXAO
 

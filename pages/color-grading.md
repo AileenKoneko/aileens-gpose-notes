@@ -19,13 +19,13 @@ Modern grading shaders expose that whole sequence so each step is something you 
 
 ## How to use it in gposes
 
-> _TODO: your use cases — what FFXIV gpose scenarios benefit from this effect, what looks it helps you achieve._
+> _Use cases coming soon._
 
 ## What I use
 
 I run **iMMERSE ReGrade** for this. It's a slot-based grading pipeline — nine slots, you pick which operation each one runs and what order they fire in, and each slot feeds the next.
 
-> _TODO: your personal notes — typical values you reach for, what you pair it with, any quirks you've noticed._
+> _Personal notes coming soon._
 
 ::: details Settings — iMMERSE ReGrade
 
